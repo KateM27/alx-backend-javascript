@@ -1,4 +1,4 @@
-# 0x04. Typescript
+## 0x04. Typescript
 
 - Basic types in Typescript
 - Interfaces, Classes, and functions
