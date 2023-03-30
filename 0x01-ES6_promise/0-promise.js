@@ -3,3 +3,6 @@ export default function getResponseFromAPI() {
     resolve('Resolved');
   });
 }
+
+// const response = getResponseFromAPI();
+// console.log(response instanceof Promise);

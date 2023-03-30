@@ -1,7 +1,9 @@
 export default function signUpUser(firstName, lastName) {
-  const obj = {
+  const details = {
     firstName,
     lastName,
   };
-  return Promise.resolve(obj);
+  return Promise.resolve(details);
 }
+
+// console.log(signUpUser("Cate", "Mamo"));

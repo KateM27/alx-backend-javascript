@@ -1,3 +1,4 @@
+// for of loop - iterate through an iterable(array, string)
 export default function appendToEachArrayValue(array, appendString) {
   const arr = [];
   for (const value of array) {
@@ -6,3 +7,5 @@ export default function appendToEachArrayValue(array, appendString) {
 
   return arr;
 }
+
+// console.log(appendToEachArrayValue(['appended', 'fixed', 'displayed'], 'correctly-'));
