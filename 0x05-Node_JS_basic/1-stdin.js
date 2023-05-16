@@ -1,45 +1,18 @@
-// function readInput(promptText, callback) {
-//     process.stdout.write(promptText);
-  
-//     process.stdin.setEncoding('utf8');
-  
-//     process.stdin.on('data', (data) => {
-//       callback(data.trim());
-//       process.stdin.pause();
-//     });
-  
-//     process.stdin.resume();
-//   }
-  
-//   // Example usage
-//   readInput('Welcome to Holberton School, what is your name? ', (input) => {
-//     console.log(`Your name is: ${input}`);
-//   });
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
+process.stdin.setEncoding('utf8');
 
-  function readInput(promptText, exitKeyword, exitMessage, callback) {
-    process.stdout.write(promptText);
+process.stdin.on('data', (data) => {
+  const input = data.trim();
   
-    process.stdin.setEncoding('utf8');
-  
-    process.stdin.on('data', (data) => {
-      const input = data.trim();
-      
-      if (input === exitKeyword) {
-        console.log(exitMessage);
-        process.stdout.write('\n');
-        process.exit();
-      }
-  
-      callback(input);
-      process.stdin.pause();
-    });
-  
-    process.stdin.resume();
+  if (input) {
+    console.log(`Your name is: ${input}`);
+    process.stdout.write('This important sofware is now closing\n');
+    process.exit();
   }
-  
-  // Example usage
-  readInput('Welcome to HS, what is your name?', 'This important software is now closing', (input) => {
-    console.log(`Your name is: ${input}!`);
-  });
-    
+
+  callback(input);
+  process.stdin.pause();
+});
+
+process.stdin.resume();

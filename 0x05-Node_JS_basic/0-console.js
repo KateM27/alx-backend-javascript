@@ -1,5 +1,7 @@
-export function displayMessage(message) {
+export default function displayMessage(message) {
     process.stdout.write(message);
 }
 
-displayMessage("Hello NodeJS!")
+module.exports = displayMessage;
+
+// displayMessage("Hello NodeJS!\n")
