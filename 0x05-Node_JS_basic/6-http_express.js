@@ -5,7 +5,7 @@ const
     host = '127.0.0.1'
 
 app.get('/', (req, res) => {
-    res.send('Hello Holberton School');
+    res.send('Hello Holberton School!');
 });
 
 app.listen(port, () => {
