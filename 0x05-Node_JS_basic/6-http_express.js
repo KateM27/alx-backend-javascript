@@ -1,13 +1,14 @@
 const
-    express = require('express')
-    app = express()
-    port = 1245
-    host = '127.0.0.1'
+  express = require('express');
+
+const app = express();
+const port = 1245;
+const host = '127.0.0.1';
 
 app.get('/', (req, res) => {
-    res.send('Hello Holberton School!');
+  res.send('Hello Holberton School!');
 });
 
 app.listen(port, () => {
-    console.log(`Server running on http://${host}:${port}`);
+  console.log(`Server running on http://${host}:${port}`);
 });
