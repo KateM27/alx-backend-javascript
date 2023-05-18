@@ -1,16 +1,19 @@
-import { createServer } from 'http';
+const http = require('http');
 
-const port = 1245;
-const app = createServer();
+const PORT = 1245;
+const app = http.createServer();
 
-app.on((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello Holberton School');
+app.on('request', (_, res) => {
+  const responseText = 'Hello Holberton School!';
+
+  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Length', responseText.length);
+  res.statusCode = 200;
+  res.write(Buffer.from(responseText));
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+app.listen(PORT, () => {
+  process.stdout.write(`Server running on port ${PORT}\n`);
 });
 
-export default app;
+module.exports = app;
