@@ -9,3 +9,5 @@
 - What are hooks and when to use them
 - Unit testing with Async functions
 - How to write integration tests with a small node server
+
+Run tests with `npm run test *.test.js`. Every test should pass
