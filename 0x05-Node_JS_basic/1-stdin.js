@@ -1,9 +1,11 @@
 process.stdout.write('Welcome to Holberton School, what is your name?\n');
 
-process.stdin.on('readable', () => {
-  const chunk = process.stdin.read();
+process.stdin.setEncoding('utf8');
 
-  if (chunk) {
+process.stdin.on('readable', () => {
+  const input = process.stdin.read();
+
+  if (input) {
     process.stdout.write(`Your name is: ${input}`);
   }
 });
